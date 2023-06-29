@@ -162,7 +162,7 @@ export default {
       this.pegarOperacao = operation;
 
       operation = operation.replace("x", "*");
-      operation = operation.replace("/", "÷");
+      operation = operation.replace("÷", "/");
       this.pegarResultado = eval(operation);
     },
   },
