@@ -3,6 +3,11 @@
     class="flex justify-center h-screen bg-gradient-to-r from-green-500 to-green-400"
   >
     <div class="flex flex-col items-center justify-center pt-11">
+      <div class="flex">
+        <h1 class="text-4xl font-bold text-white p-8">Calculadora</h1>
+        <img src="../assets/vue-logo.svg" width="52" alt="logo" />
+      </div>
+
       <div>
         <p class="flex justify-end bg-white text-gray-500 p-2">
           {{ pegarOperacao }}
@@ -75,6 +80,7 @@
         </button>
         <button
           class="bg-white h-12 w-12 hover:bg-gray-300 border border-black-900"
+          @click="click('+')"
         >
           +
         </button>
@@ -129,7 +135,7 @@
 export default {
   data() {
     return {
-      pegarOperacao: "0",
+      pegarOperacao: "",
       pegarResultado: "",
     };
   },
